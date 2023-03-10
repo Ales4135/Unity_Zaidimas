@@ -125,6 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb3bf34a0d442b546a73fd792cba6580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noCollidersRemain:
+    m_PersistentCalls:
+      m_Calls: []
   detectedColliders: []
 --- !u!61 &2208257500586790539
 BoxCollider2D:
@@ -223,6 +226,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb3bf34a0d442b546a73fd792cba6580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noCollidersRemain:
+    m_PersistentCalls:
+      m_Calls: []
   detectedColliders: []
 --- !u!1 &5523452631186442697
 GameObject:
@@ -240,7 +246,7 @@ GameObject:
   - component: {fileID: 8942538550086873975}
   - component: {fileID: 3785695081463024052}
   - component: {fileID: 6246353732354584282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: KnightEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

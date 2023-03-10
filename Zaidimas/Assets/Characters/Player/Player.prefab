@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 6769745558177720456}
   - component: {fileID: 125209868895276770}
   - component: {fileID: 921072497717197206}
+  - component: {fileID: 1154739684574081930}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -447,3 +448,29 @@ MonoBehaviour:
   _isAlive: 1
   isInvincible: 0
   invincibilityTime: 1
+--- !u!114 &1154739684574081930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7510967466386692598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18297356b7fd95143bd7f1dcad5705e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _anim: {fileID: 7954719782813541156}
+  _source: {fileID: 0}
+  _groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  _jumpParticles: {fileID: 0}
+  _launchParticles: {fileID: 0}
+  _moveParticles: {fileID: 0}
+  _landParticles: {fileID: 0}
+  _footsteps: []
+  _maxTilt: 0.1
+  _tiltSpeed: 1
+  _maxIdleSpeed: 2
+  _maxParticleFallSpeed: -40

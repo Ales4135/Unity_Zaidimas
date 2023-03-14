@@ -21413,6 +21413,10 @@ PrefabInstance:
       propertyPath: _maxHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1229538879098056303, guid: 2f580fefe0d3506419ed68d5c3e10c00, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3089236758130626515, guid: 2f580fefe0d3506419ed68d5c3e10c00, type: 3}
       propertyPath: airWalk
       value: 5

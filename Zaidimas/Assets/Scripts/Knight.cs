@@ -12,7 +12,7 @@ public class Knight : MonoBehaviour
     public DetectionZone cliffDetectionZone;
 
     Rigidbody2D rb;
-    TouchingDirections TouchingDirections;
+    TouchingDirections touchingDirections;
     Animator animator;
     Damageable damageable;
 
@@ -69,7 +69,7 @@ public class Knight : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        TouchingDirections= GetComponent<TouchingDirections>();
+        touchingDirections= GetComponent<TouchingDirections>();
         animator= GetComponent<Animator>();
         damageable = GetComponent<Damageable>();    
     }
@@ -88,17 +88,17 @@ public class Knight : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (TouchingDirections.IsGrounded && TouchingDirections.IsOnWall)
+        if (touchingDirections.IsGrounded && touchingDirections.IsOnWall)
         {
             FlipDirection();
         }
 
         if (!damageable.LockVelocity)
         {
-            if (CanMove)
+            if (CanMove && touchingDirections.IsGrounded)
             {
                 rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x + (walkAcceleration +
-                    walkDirectionVector.x + Time.fixedDeltaTime), -maxSpeed, maxSpeed), rb.velocity.y);
+                    walkDirectionVector.x * Time.fixedDeltaTime), -maxSpeed, maxSpeed), rb.velocity.y);
             }
             else
             {
@@ -130,7 +130,7 @@ public class Knight : MonoBehaviour
    
     public void OnCliffDetected()
     {
-        if (TouchingDirections.IsGrounded)
+        if (touchingDirections.IsGrounded)
         {
             FlipDirection();
         }

@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Damageable : MonoBehaviour
 {
     public UnityEvent<int, Vector2> damageableHit;
+    public UnityEvent damageableDeath;
 
     Animator animator;
 
@@ -55,7 +56,7 @@ public class Damageable : MonoBehaviour
     private float timeSinceHit = 0;
     public float invincibilityTime = 0.25f;
 
-    private bool IsAlive { get 
+    public bool IsAlive { get 
         {
             return _isAlive;
         }
@@ -64,6 +65,11 @@ public class Damageable : MonoBehaviour
             _isAlive = value;
             animator.SetBool(AnimationStrings.isAlive, value);
             Debug.Log("IsAlive set " + value);
+
+            if(value == false)
+            {
+                damageableDeath.Invoke();
+            }
         }
     }
 

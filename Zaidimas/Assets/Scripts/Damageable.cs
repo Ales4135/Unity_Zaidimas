@@ -55,7 +55,7 @@ public class Damageable : MonoBehaviour
     private float timeSinceHit = 0;
     public float invincibilityTime = 0.25f;
 
-    private bool IsAlive { get 
+    public bool IsAlive { get 
         {
             return _isAlive;
         }

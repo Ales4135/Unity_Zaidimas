@@ -144,6 +144,9 @@ MonoBehaviour:
   damageableHit:
     m_PersistentCalls:
       m_Calls: []
+  damageableDeath:
+    m_PersistentCalls:
+      m_Calls: []
   _maxHealth: 50
   _health: 50
   _isAlive: 1
@@ -184,6 +187,7 @@ MonoBehaviour:
   flightSpeed: 2
   waypointReachedDistance: 0.1
   biteDetectionZone: {fileID: 6256010906231410972}
+  deathCollider: {fileID: 0}
   waypoints: []
   _hasTarget: 0
 --- !u!1 &4961590395078240602

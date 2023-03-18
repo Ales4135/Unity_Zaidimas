@@ -28,7 +28,7 @@ public class Knight : MonoBehaviour
             if(_walkDirection != value)
             {
                 gameObject.transform.localScale =
-                    new Vector2(gameObject.transform.localScale.x * -1, gameObject.transform.localScale.y);
+                    new Vector2(gameObject.transform.localScale.x, gameObject.transform.localScale.y);
                 if (value == WalkableDirection.Right)
                 {
                     walkDirectionVector = Vector2.right;

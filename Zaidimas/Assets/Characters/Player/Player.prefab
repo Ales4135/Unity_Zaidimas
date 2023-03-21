@@ -294,6 +294,8 @@ Transform:
   - {fileID: 3501639934756970219}
   - {fileID: 3807912891243777775}
   - {fileID: 7246665734747642139}
+  - {fileID: 944838874942939899}
+  - {fileID: 5856302491274598702}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -636,6 +638,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  damageableDeath:
+    m_PersistentCalls:
+      m_Calls: []
   _maxHealth: 0
   _health: 100
   _isAlive: 1
@@ -681,6 +686,94 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   launchPoint: {fileID: 7246665734747642139}
   projectilePrefab: {fileID: 3540426664034787450, guid: afd33f751bf87304b9505ada65acd3a0, type: 3}
+--- !u!1 &7645840702583988427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 944838874942939899}
+  - component: {fileID: 6269699124666858417}
+  - component: {fileID: 6792479012987316581}
+  m_Layer: 9
+  m_Name: AirAttack1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &944838874942939899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7645840702583988427}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7198083012389231034}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &6269699124666858417
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7645840702583988427}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.42340577, y: -0.045909584}
+      - {x: 0.42900208, y: 0.31024128}
+      - {x: 0.06224644, y: 0.5836499}
+      - {x: -0.16133451, y: 0.4645378}
+      - {x: -0.003528595, y: 0.2752729}
+      - {x: 0.0021021366, y: 0.06352636}
+      - {x: -0.1279397, y: -0.081603825}
+      - {x: -0.36011058, y: -0.10455221}
+      - {x: -0.9388102, y: -0.106019735}
+      - {x: -1.3514649, y: 0.025842905}
+      - {x: -1.3349613, y: -0.3360765}
+      - {x: -0.9253372, y: -0.4673016}
+      - {x: -0.19618508, y: -0.4723798}
+      - {x: 0.053423643, y: -0.38924122}
+      - {x: 0.14715159, y: -0.35257983}
+      - {x: 0.24098599, y: -0.31786573}
+--- !u!114 &6792479012987316581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7645840702583988427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18a67978f97276408728fb1f12ce0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 15
+  knockback: {x: 0, y: 0}
 --- !u!1 &8528076956291597505
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,3 +805,89 @@ Transform:
   m_Father: {fileID: 7198083012389231034}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8631075980221349646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5856302491274598702}
+  - component: {fileID: 3732141042642007161}
+  - component: {fileID: 6183196349670191855}
+  m_Layer: 9
+  m_Name: AirAttack2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5856302491274598702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8631075980221349646}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7198083012389231034}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &3732141042642007161
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8631075980221349646}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.4941646, y: 0.37864393}
+      - {x: -0.08989689, y: 0.9077612}
+      - {x: -0.6217568, y: 0.9374446}
+      - {x: -0.53085315, y: 0.35446852}
+      - {x: -0.20231247, y: 0.34656212}
+      - {x: 0.009408414, y: 0.068413794}
+      - {x: 0.01250422, y: -0.12174392}
+      - {x: -0.3058051, y: -0.55595285}
+      - {x: -1.0440632, y: -1.0200796}
+      - {x: -0.38285196, y: -1.0176487}
+      - {x: -0.20404693, y: -0.9519681}
+      - {x: -0.06450796, y: -0.8766918}
+      - {x: 0.17073786, y: -0.6356158}
+      - {x: 0.4847113, y: -0.19993389}
+--- !u!114 &6183196349670191855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8631075980221349646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18a67978f97276408728fb1f12ce0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 25
+  knockback: {x: 0, y: 0}

@@ -22557,9 +22557,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5899011108172655003, guid: 019dbc3439ef7314d90665c11372d548, type: 3}
+      propertyPath: attackDamage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6758884944840471360, guid: 019dbc3439ef7314d90665c11372d548, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311786219392376034, guid: 019dbc3439ef7314d90665c11372d548, type: 3}
+      propertyPath: attackDamage
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7493034105867018558, guid: 019dbc3439ef7314d90665c11372d548, type: 3}
       propertyPath: m_IsActive

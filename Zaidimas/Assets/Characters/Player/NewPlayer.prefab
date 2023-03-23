@@ -123,6 +123,8 @@ Transform:
   - {fileID: 5560062576754509132}
   - {fileID: 1707628025314349122}
   - {fileID: 2216553663181005833}
+  - {fileID: 4510683668063552099}
+  - {fileID: 6224476654447626735}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -453,6 +455,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  damageableDeath:
+    m_PersistentCalls:
+      m_Calls: []
   _maxHealth: 0
   _health: 100
   _isAlive: 1
@@ -615,6 +620,92 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 20
   knockback: {x: 5, y: 0}
+--- !u!1 &7417967710255146194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4510683668063552099}
+  - component: {fileID: 2945199535982684002}
+  - component: {fileID: 5899011108172655003}
+  m_Layer: 9
+  m_Name: AirAttack1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4510683668063552099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417967710255146194}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.6703892, y: -0.43393824, z: -0}
+  m_LocalScale: {x: 0.6675973, y: 0.6675973, z: 0.6675973}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3172863944788826896}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &2945199535982684002
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417967710255146194}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -3.2390282, y: 1.263023}
+      - {x: -4.0388794, y: 1.0374942}
+      - {x: -5.3056197, y: -0.745073}
+      - {x: -4.6841397, y: -1.1099639}
+      - {x: -3.2017307, y: -1.0380483}
+      - {x: -2.849605, y: -1.0647953}
+      - {x: -2.2974799, y: -0.9011883}
+      - {x: -2.0122643, y: -0.5278989}
+      - {x: -1.9283285, y: -0.10822952}
+      - {x: -1.9394269, y: 0.42526495}
+      - {x: -1.9170105, y: 0.5610242}
+      - {x: -1.995238, y: 0.7090663}
+      - {x: -2.0203164, y: 0.8629782}
+      - {x: -2.7644265, y: 1.1328707}
+--- !u!114 &5899011108172655003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417967710255146194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18a67978f97276408728fb1f12ce0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 15
+  knockback: {x: 0, y: 0}
 --- !u!1 &7493034105867018558
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,3 +792,89 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 10
   knockback: {x: 1, y: 0}
+--- !u!1 &8043465054839653880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6224476654447626735}
+  - component: {fileID: 3735837581720755322}
+  - component: {fileID: 7311786219392376034}
+  m_Layer: 9
+  m_Name: AirAttack2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6224476654447626735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8043465054839653880}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.6703892, y: -0.43393824, z: -0}
+  m_LocalScale: {x: 0.6675973, y: 0.6675973, z: 0.6675973}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3172863944788826896}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &3735837581720755322
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8043465054839653880}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.2177557, y: 0.30886695}
+      - {x: -1.3964314, y: 0.8055538}
+      - {x: -2.340557, y: 0.95857614}
+      - {x: -3.9738894, y: 0.8669781}
+      - {x: -3.9273818, y: -0.16397014}
+      - {x: -3.784456, y: -0.4303354}
+      - {x: -3.6742506, y: -0.7536581}
+      - {x: -3.5965295, y: -1.1352804}
+      - {x: -2.3712454, y: -0.9414587}
+      - {x: -2.1100059, y: -0.9041424}
+      - {x: -1.8953271, y: -0.83649814}
+      - {x: -1.5690613, y: -0.6811279}
+      - {x: -1.4537107, y: -0.5334084}
+      - {x: -1.2679929, y: -0.31982958}
+--- !u!114 &7311786219392376034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8043465054839653880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18a67978f97276408728fb1f12ce0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 25
+  knockback: {x: 0, y: 0}

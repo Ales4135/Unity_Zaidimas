@@ -27,7 +27,7 @@ public class HealthBar : MonoBehaviour
     void Start()
     {
         healthSlider.value = CalculateSliderPercentage(playerDamageable.Health, playerDamageable.MaxHealth);
-        healthBarTetx.text = "HP " + playerDamageable.Health + " / " + playerDamageable.MaxHealth;
+        healthBarTetx.text = "Health " + playerDamageable.Health + " / " + playerDamageable.MaxHealth;
         
     }
 
@@ -49,10 +49,10 @@ public class HealthBar : MonoBehaviour
     private void OnPlayerHealthChanged(int newHealth, int maxHealth)
     {
         healthSlider.value = CalculateSliderPercentage(newHealth, maxHealth);
-        healthBarTetx.text = "HP " + newHealth + " / " + maxHealth;
+        healthBarTetx.text = "Health " + newHealth + " / " + maxHealth;
         if(newHealth <= 0)
         {
-            healthBarTetx.text = "HP " + 0 + " / " + maxHealth;
+            healthBarTetx.text = "Health " + 0 + " / " + maxHealth;
         }
     }
 

@@ -8,6 +8,7 @@ public class Damageable : MonoBehaviour
     public UnityEvent<int, Vector2> damageableHit;
     public UnityEvent damageableDeath;
     public UnityEvent<int, int> healthChanged;
+    public GameOverScreen gameOverScreen;
 
     Animator animator;
 
@@ -70,6 +71,7 @@ public class Damageable : MonoBehaviour
             if(value == false)
             {
                 damageableDeath.Invoke();
+                gameOverScreen.Setup(420);
             }
         }
     }

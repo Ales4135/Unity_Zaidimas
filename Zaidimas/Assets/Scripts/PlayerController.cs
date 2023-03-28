@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour
             _isFacingRight = value;
         } }
 
-    private void Awake()
+    public void Awake()//private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();

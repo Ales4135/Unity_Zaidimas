@@ -10,10 +10,12 @@ public class GameOverScreen : MonoBehaviour
     [SerializeField]
     public TextMeshProUGUI pointsText;
 
-    public void Setup(int score)
+    public TextMeshProUGUI textCoins;
+
+    public void Setup()
     {
         gameObject.SetActive(true);
-        pointsText.text = score.ToString() + " POINTS";
+        pointsText.text = textCoins.text + " POINTS";
     }
 
     public void RestartButton()

@@ -9,6 +9,7 @@ public class Damageable : MonoBehaviour
     public UnityEvent damageableDeath;
     public UnityEvent<int, int> healthChanged;
     public GameOverScreen gameOverScreen;
+    public CoinPicker coins;
 
     Animator animator;
 
@@ -71,7 +72,7 @@ public class Damageable : MonoBehaviour
             if(value == false)
             {
                 damageableDeath.Invoke();
-                gameOverScreen.Setup(420);
+                gameOverScreen.Setup();
             }
         }
     }

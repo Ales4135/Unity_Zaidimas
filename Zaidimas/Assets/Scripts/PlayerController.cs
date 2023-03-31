@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     Vector2 moveInput;
     TouchingDirections touchingDirections;
     Damageable damageable;
+    public Vector3 respawnPoint;
 
     public float CurrentSpeed { get 
         {
@@ -118,7 +119,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        respawnPoint = transform.position;
     }
 
     // Update is called once per frame
@@ -206,6 +207,14 @@ public class PlayerController : MonoBehaviour
         if (context.started)
         {
             animator.SetTrigger(AnimationStrings.rangedAttackTrigger);
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Checkpoint")
+        {
+            respawnPoint = other.transform.position;
         }
     }
 }

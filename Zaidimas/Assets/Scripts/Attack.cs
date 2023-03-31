@@ -7,6 +7,7 @@ public class Attack : MonoBehaviour
     public int attackDamage = 10;
     public Vector2 knockback = Vector2.zero;
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // See if can be hit
@@ -15,7 +16,6 @@ public class Attack : MonoBehaviour
         if (damageable != null)
         {
             Vector2 deliveredKnockback = transform.parent.localScale.x > 0 ? knockback : new Vector2(-knockback.x, knockback.y);
-
             bool gotHit = damageable.Hit(attackDamage, deliveredKnockback);
 
             if (gotHit)
@@ -23,5 +23,6 @@ public class Attack : MonoBehaviour
                 Debug.Log(collision.name + " hit for " + attackDamage);
             }
         }
+        
     }
 }

@@ -9,7 +9,6 @@ public class Damageable : MonoBehaviour
     public UnityEvent damageableDeath;
     public UnityEvent<int, int> healthChanged;
     public GameOverScreen gameOverScreen;
-    public CoinPicker coins;
 
     Animator animator;
 

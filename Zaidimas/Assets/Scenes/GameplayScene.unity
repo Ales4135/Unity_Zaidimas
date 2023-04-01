@@ -32539,7 +32539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1389114081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34848,8 +34848,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   gameOverScreen: {fileID: 0}
-  _maxHealth: 0
-  _health: 100
+  _maxHealth: 300
+  _health: 300
   _isAlive: 1
   isInvincible: 0
   invincibilityTime: 0.25

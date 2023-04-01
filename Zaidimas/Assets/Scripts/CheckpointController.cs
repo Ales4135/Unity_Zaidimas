@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CheckpointController : MonoBehaviour
 {
@@ -23,10 +24,16 @@ public class CheckpointController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player")
+        if(other.transform.tag == "Player")
         {
             checkpointSpriteRenderer.sprite = blueFlag;
             checkpointReached = true;
+            PlayerController.lastCheckpoint = transform.position;
         }
+        //if(other.tag == "Player")
+        //{
+        //    checkpointSpriteRenderer.sprite = blueFlag;
+        //    checkpointReached = true;
+        //}
     }
 }

@@ -9,7 +9,7 @@ public class Damageable : MonoBehaviour
     public UnityEvent damageableDeath;
     public UnityEvent<int, int> healthChanged;
     public GameOverScreen gameOverScreen;
-
+         
     Animator animator;
 
     [SerializeField]
@@ -58,14 +58,15 @@ public class Damageable : MonoBehaviour
     private float timeSinceHit = 0;
     public float invincibilityTime = 0.25f;
 
-    public bool IsAlive { get 
+    public bool IsAlive { 
+        get 
         {
             return _isAlive;
         }
         set 
         {
             _isAlive = value;
-            animator.SetBool(AnimationStrings.isAlive, value);
+            //animator.SetBool(AnimationStrings.isAlive, value);
             Debug.Log("IsAlive set " + value);
 
             if(value == false)

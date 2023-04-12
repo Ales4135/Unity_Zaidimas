@@ -17,8 +17,8 @@ public class PlayerController : MonoBehaviour
     Vector2 moveInput;
     TouchingDirections touchingDirections;
     Damageable damageable;
-    public Vector3 respawnPoint;
 
+    public Vector3 respawnPoint;
     public static Vector2 lastCheckpoint;
 
     public float CurrentSpeed { get 
@@ -121,7 +121,7 @@ public class PlayerController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {       
+    {
         respawnPoint = transform.position;
     }
 

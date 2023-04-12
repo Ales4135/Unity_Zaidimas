@@ -8,7 +8,7 @@ public class CheckpointController : MonoBehaviour
     public Sprite redFlag;
     public Sprite blueFlag;
     private SpriteRenderer checkpointSpriteRenderer;
-    public bool checkpointReached;
+    public bool checkpointReached = false;
 
     // Start is called before the first frame update
     void Start()

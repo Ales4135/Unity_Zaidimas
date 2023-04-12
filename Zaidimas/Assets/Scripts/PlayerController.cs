@@ -102,6 +102,8 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D rb;
     Animator animator;
+    float x;
+    AudioSource audioSrc;
     public bool isFacingRight { get { return _isFacingRight; } private set 
         { 
             if(_isFacingRight != value)
@@ -123,12 +125,23 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         respawnPoint = transform.position;
+        audioSrc = GetComponent<AudioSource>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        x = Input.GetAxis("Horizontal") * walkSpeed;
+        rb.velocity = new Vector2(x, rb.velocity.y);
+
+        if(rb.velocity.x != 0) {
+            if(!audioSrc.isPlaying) {
+                audioSrc.Play();
+            }
+        } else {
+            audioSrc.Stop();
+        }
     }
 
     private void FixedUpdate()

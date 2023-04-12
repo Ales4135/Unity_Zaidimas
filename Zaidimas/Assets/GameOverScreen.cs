@@ -40,15 +40,15 @@ public class GameOverScreen : MonoBehaviour
         {
             player.transform.position = respawnPoint.transform.position;
             health.Health = 100;
-            gameObject.SetActive(false);
             health.IsAlive = true;
+            gameObject.SetActive(false);
         }
         else
         {
             player.transform.position = startPoint;
             health.Health = 100;
-            gameObject.SetActive(false);
             health.IsAlive = true;
+            gameObject.SetActive(false);
         }
     }
 }

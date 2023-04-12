@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     Vector2 moveInput;
     TouchingDirections touchingDirections;
     Damageable damageable;
+    AudioSource audioSrc;
 
     public Vector3 respawnPoint;
     public static Vector2 lastCheckpoint;
@@ -102,6 +103,8 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D rb;
     Animator animator;
+    float x;
+    float x1;
     public bool isFacingRight { get { return _isFacingRight; } private set 
         { 
             if(_isFacingRight != value)
@@ -123,12 +126,24 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         respawnPoint = transform.position;
+        rb = GetComponent<Rigidbody2D>();
+        audioSrc = GetComponent<AudioSource> ();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        x = Input.GetAxis("Horizontal") * runSpeed;
+        rb.velocity = new Vector2(x, rb.velocity.y);
+
+        if(rb.velocity.x != 0) {
+            if(!audioSrc.isPlaying) {
+                audioSrc.Play();
+            }
+        }
+        else {
+            audioSrc.Stop();
+        }
     }
 
     private void FixedUpdate()

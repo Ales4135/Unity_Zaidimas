@@ -12,6 +12,10 @@ public class GameOverScreen : MonoBehaviour
 
     public TextMeshProUGUI textCoins;
 
+    public TextMeshProUGUI timerText;
+
+    public TextMeshProUGUI textTime;
+
     public Transform player;
     public Transform respawnPoint;
     public Vector3 startPoint = new Vector3(-2.39f, -0.98f, -0.0514f);
@@ -22,6 +26,8 @@ public class GameOverScreen : MonoBehaviour
     {
         gameObject.SetActive(true);
         pointsText.text = textCoins.text + " POINTS";
+
+        textTime.text = "TIME: " + timerText.text;
     }
 
     public void RestartButton()

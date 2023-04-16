@@ -12,10 +12,22 @@ public class GameOverScreen : MonoBehaviour
 
     public TextMeshProUGUI textCoins;
 
+    public TextMeshProUGUI timerText;
+
+    public TextMeshProUGUI textTime;
+
+    public Transform player;
+    public Transform respawnPoint;
+    public Vector3 startPoint = new Vector3(-2.39f, -0.98f, -0.0514f);
+    public CheckpointController checkpoint;
+    public Damageable health;
+
     public void Setup()
     {
         gameObject.SetActive(true);
         pointsText.text = textCoins.text + " POINTS";
+
+        textTime.text = "TIME: " + timerText.text;
     }
 
     public void RestartButton()
@@ -26,5 +38,23 @@ public class GameOverScreen : MonoBehaviour
     public void ExitButton()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void RespawnButton()
+    {
+        if (checkpoint.checkpointReached == true)
+        {
+            player.transform.position = respawnPoint.transform.position;
+            health.Health = 100;
+            health.IsAlive = true;
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            player.transform.position = startPoint;
+            health.Health = 100;
+            health.IsAlive = true;
+            gameObject.SetActive(false);
+        }
     }
 }

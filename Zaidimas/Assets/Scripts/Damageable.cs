@@ -9,8 +9,7 @@ public class Damageable : MonoBehaviour
     public UnityEvent damageableDeath;
     public UnityEvent<int, int> healthChanged;
     public GameOverScreen gameOverScreen;
-
-
+         
     Animator animator;
 
     [SerializeField]
@@ -43,7 +42,7 @@ public class Damageable : MonoBehaviour
             healthChanged?.Invoke(_health, MaxHealth);
             if(_health <= 0)
             {
-                IsAlive = false; 
+                IsAlive = false;
             }
         }
     }

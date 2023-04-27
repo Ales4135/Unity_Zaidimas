@@ -18,8 +18,10 @@ public class GameOverScreen : MonoBehaviour
 
     public Transform player;
     public Transform respawnPoint;
+    public Transform respawnPointLevelTwo;
     public Vector3 startPoint = new Vector3(-2.39f, -0.98f, -0.0514f);
     public CheckpointController checkpoint;
+    public CheckpointControllerLevelTwo checkpointLevelTwo;
     public Damageable health;
 
     public void Setup()
@@ -42,9 +44,16 @@ public class GameOverScreen : MonoBehaviour
 
     public void RespawnButton()
     {
-        if (checkpoint.checkpointReached == true)
+        if (checkpoint.checkpointReached == true && checkpointLevelTwo.checkpointReached == false)
         {
             player.transform.position = respawnPoint.transform.position;
+            health.Health = 100;
+            health.IsAlive = true;
+            gameObject.SetActive(false);
+        }
+        else if(checkpointLevelTwo.checkpointReached == true && checkpoint.checkpointReached == true)
+        {
+            player.transform.position = respawnPointLevelTwo.transform.position;
             health.Health = 100;
             health.IsAlive = true;
             gameObject.SetActive(false);

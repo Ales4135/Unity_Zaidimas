@@ -33,7 +33,7 @@ public class GameOverScreen : MonoBehaviour
     }
 
     public void RestartButton()
-    { 
+    {
         SceneManager.LoadScene("GameplayScene");
     }
 
@@ -51,7 +51,7 @@ public class GameOverScreen : MonoBehaviour
             health.IsAlive = true;
             gameObject.SetActive(false);
         }
-        else if(checkpointLevelTwo.checkpointReached == true && checkpoint.checkpointReached == true)
+        else if (checkpointLevelTwo.checkpointReached == true && checkpoint.checkpointReached == true)
         {
             player.transform.position = respawnPointLevelTwo.transform.position;
             health.Health = 100;

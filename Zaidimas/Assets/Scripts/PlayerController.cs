@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     Vector2 moveInput;
     TouchingDirections touchingDirections;
     Damageable damageable;
+    [SerializeField] private AudioClip throwKnifeSound;
+    [SerializeField] private AudioClip swordSwingSound;
+    [SerializeField] private AudioClip jumpSound;
 
     public Vector3 respawnPoint;
     public static Vector2 lastCheckpoint;
@@ -200,6 +203,7 @@ public class PlayerController : MonoBehaviour
         // todo check if alive
         if (context.started && touchingDirections.IsGrounded && CanMove)
         {
+            SoundManager.instance.PlaySound(jumpSound);
             animator.SetTrigger(AnimationStrings.jumpTrigger);
             rb.velocity = new Vector2(rb.velocity.x, jumpImpulse);
         }
@@ -207,6 +211,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
     {
+        SoundManager.instance.PlaySound(swordSwingSound);
         if (context.started)
         {
             animator.SetTrigger(AnimationStrings.attackTrigger);
@@ -220,6 +225,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnRangedAttack(InputAction.CallbackContext context)
     {
+        SoundManager.instance.PlaySound(throwKnifeSound);
         if (context.started)
         {
             animator.SetTrigger(AnimationStrings.rangedAttackTrigger);

@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: c09d2f997a63fae4d945380b3c897a6d
+guid: 15c00af0258e6044bbb83d5419d7b1a5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - gameOverScreen: {instanceID: 0}
-  - deathSound: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

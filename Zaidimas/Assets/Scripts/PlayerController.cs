@@ -137,14 +137,7 @@ public class PlayerController : MonoBehaviour
     {
         x = Input.GetAxis("Horizontal") * walkSpeed;
         rb.velocity = new Vector2(x, rb.velocity.y);
-
-        if(rb.velocity.x != 0) {
-            if(!audioSrc.isPlaying) {
-                audioSrc.Play();
-            }
-        } else {
-            audioSrc.Stop();
-        }
+        PlayFootstepAudio();
     }
 
     private void FixedUpdate()
@@ -238,5 +231,18 @@ public class PlayerController : MonoBehaviour
         {
             respawnPoint = other.transform.position;
         }
+    }
+
+    void PlayFootstepAudio()
+    {
+        if(IsMoving == true && touchingDirections.IsGrounded)
+        {
+            if(!audioSrc.isPlaying)
+            {
+                audioSrc.Play();
+            }
+        }
+        else
+            audioSrc.Stop();
     }
 }
